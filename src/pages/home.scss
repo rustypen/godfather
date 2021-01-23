@@ -1,0 +1,14 @@
+.home{
+  // text-align: center;
+  width: 100%;
+  padding: 15px;
+  max-width: 1024px;
+  margin: 25vh auto 0;
+  &__logo{
+    width: 160px;
+    margin: 20px auto;
+    img{
+      width: 100%;
+    }
+  }
+}

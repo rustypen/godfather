@@ -1,0 +1,26 @@
+.header{
+  padding: 20px 0 10px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  &__logo{
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  @media (min-width: 1023px){
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    &__logo{
+      max-width: 200px;
+      padding: 0 20px 0 0;
+      flex-shrink: 0;
+    }
+  }
+}

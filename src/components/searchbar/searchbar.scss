@@ -1,0 +1,45 @@
+.searchbar{
+  display: block;
+  width: 100%;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,.1),
+              -1px -1px 3px 1px rgba(0,0,0,.1);
+  position: relative;
+  &:focus-within{
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.2),
+              -1px -1px 3px 1px rgba(0,0,0,.2);
+  }
+  &__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  &__icons{
+    font-size: 1.25rem;
+    background: none;
+    border: 0;
+    outline: none;
+    padding: 0 5px;
+    color: rgba(0,0,0,0.5);
+  }
+  &__input{
+    width: 100%;
+    padding: 0 7px ;
+    font-size: 1.2rem;
+    border: 0;
+    outline: none;
+  }
+}
+
+// .has-suggestions{
+//   &.search{
+    
+//     box-shadow: -1px -1px 3px 1px rgba(255, 255, 255, 1),
+//                 1px 1px 3px 1px rgba(0,0,0,.2);
+//   }
+
+//   .suggestion{
+//     box-shadow: 1px 1px 3px 1px rgba(0,0,0,.2),
+//               -1px -1px 3px 1px rgba(255, 255, 255, 1);
+//   }
+// } 
