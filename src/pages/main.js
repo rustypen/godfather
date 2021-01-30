@@ -1,17 +1,19 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import Header from '../components/header';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './home';
-import Search from './search';
+import User from './user';
+import Header from '../components/header/header';
 
 function main() {
   return (
     <Router>
-      {/* <Header/> */}
-      <Switch>
-        <Route path="/search" component={Search} />
-        <Route exact path="/" component={Home} />
-      </Switch>
+      <Header/>
+      <main className="page">
+        <Switch>
+          <Route path="/:username" component={User} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </main>
     </Router>
   )
 }

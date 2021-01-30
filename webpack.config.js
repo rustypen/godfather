@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   plugins: [
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'src/index.html'
@@ -14,13 +14,14 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
     filename: 'index.js',
-    assetModuleFilename: 'assets/images/[name][ext][query]'
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './src',
     historyApiFallback: true,
+    hot: true
   },
 
   module: {
@@ -42,6 +43,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
       {

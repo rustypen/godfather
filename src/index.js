@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { render } from "react-dom";
 import Main from './pages/main';
 import './styles/style.scss'
 
 function App() {
   return <>
-    <div className="main">
+    <div className="container">
       <Main/>
     </div>
   </>;

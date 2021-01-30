@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Robot;
+  src: url('/assets/font/Roboto-Regular.ttf');
+}
+
 :root{
   font-size: 16px;
 }
@@ -9,9 +14,30 @@
 html, body{
   margin: 0;
   padding: 0;
-  // background: $mainBackgroundColor;
 }
 
-.main{
+body{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.container{
   min-height: 100vh;
+  display: flex;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 340px;
+    width: 100%;
+    background-image: url('/assets/images/Header\ image/Godfather header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+}
+.page{
+  width: 100%;
 }

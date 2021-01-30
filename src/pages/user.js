@@ -3,7 +3,6 @@ import About from '../components/about/about';
 import './home.scss';
 import {useParams} from 'react-router-dom'
 
-
 function user() {
 
   let params = useParams();
@@ -24,16 +23,16 @@ function user() {
     const json = await response.json();
     setData(json);
   }
-  
+
   useEffect(() => {
     fetcher();
-  }, [])
+  }, [params.username])
 
   return (
     <div className="home">
       {
         data && <>
-          <div className="image">
+          <div className="image" key={"hell"}>
             <img src={`/images/Profile pics/${data.image}`} height="300" width="300" />
           </div>
           <About data={data}/>
